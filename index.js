@@ -49,6 +49,7 @@ cube.addEventListener('animationend', () => {
 
 function endOpearation() {
     cube.style.animationPlayState = 'running';
+    document.getElementById("toggle").disabled = true;
     setTimeout(() => {
         backSide.innerHTML = '';
     }, 3000);
