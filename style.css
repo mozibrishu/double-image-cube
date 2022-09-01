@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#myVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.scene {
+    width: 300px;
+    height: 250px;
+    background-color: antiquewhite;
+    perspective: 800px;
+}
+
+.cube {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-125px);
+    transition: transform 1s;
+}
+
+
+.cube__face {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+}
+
+.cube__face--front {
+    background-image: url('resources/image1.jpg');
+    background-size: cover;
+}
+
+.cube__face--back {
+    background-image: url('resources/image2.jpg');
+}
+
+.cube__face--top {
+    background: hsla(86, 92%, 51%, 0.829);
+}
+
+.cube__face--bottom {
+    background: hsla(310, 74%, 75%, 0.945);
+}
+
+.cube__face--front {
+    transform: rotateY(0deg) translateZ(125px);
+}
+
+.cube__face--back {
+    transform: rotateX(180deg) translateZ(125px);
+}
+
+.cube__face--top {
+    transform: rotateX(90deg) translateZ(125px);
+}
+
+.cube__face--bottom {
+    transform: rotateX(-90deg) translateZ(125px);
+}
+
+.cubepic-animation {
+    animation: cubepic 10s;
+}
+
+@keyframes cubepic {
+
+    0%,
+    15% {
+        transform: scale(1) translateZ(-125px) rotateY(0deg);
+    }
+
+    25% {
+        transform: scale(.7) translateZ(-125px) rotateY(0deg);
+    }
+
+    32% {
+        transform: scale(.7) translateZ(-125px) rotateX(-90deg);
+    }
+    40% {
+        transform: scale(.7) translateZ(-125px) rotateX(-180deg);
+    }
+    50%,65% {
+        transform: scale(1) translateZ(-125px) rotateX(-180deg);
+    }
+    75% {
+        transform: scale(.7) translateZ(-125px) rotateX(-180deg);
+    }
+    82% {
+        transform: scale(.7) translateZ(-125px) rotateX(-270deg);
+    }
+    90% {
+        transform: scale(.7) translateZ(-125px) rotateY(-360deg);
+    }
+    100% {
+        transform: scale(1) translateZ(-125px) rotateY(-360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
