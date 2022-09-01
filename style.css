@@ -27,6 +27,12 @@ body {
     flex-direction: row;
     padding: 3px;
 }
+
+#toggle,#sound{
+    color: white;
+    background-color: #2175D6;
+    border: none;
+}
 /* #toggle{
     position: absolute;
     bottom: -5;

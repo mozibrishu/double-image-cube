@@ -74,7 +74,7 @@ function playMute() {
         video.muted = true;
         sound.innerHTML = volumeOff;
     }
-    console.log(video.paused);
+    // console.log(video.paused);
     toggle.innerHTML = video.paused ? playIcon : pauseIcon; 
     function togglePlay(e) {
         e.stopPropagation();
