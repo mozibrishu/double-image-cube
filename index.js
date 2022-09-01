@@ -112,3 +112,7 @@ function playMute() {
     sound.addEventListener('click', toggleSound);
         
 }
+
+cube.addEventListener('click',()=>{
+    window.open("http://google.com")
+})
