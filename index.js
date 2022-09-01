@@ -66,7 +66,6 @@ function playMute() {
     var volumeUp = `<i class="material-icons">volume_up</i>`;
     var volumeOff = `<i class="material-icons">volume_off</i>`;
     var replayIcon = `<i class="material-icons">replay</i>`;
-    console.log(mute);
     if(!mute){
         video.muted = false;
         sound.innerHTML = volumeUp;
@@ -74,6 +73,8 @@ function playMute() {
         video.muted = true;
         sound.innerHTML = volumeOff;
     }
+    console.log(video.paused);
+    toggle.innerHTML = video.paused ? playIcon : pauseIcon; 
     function togglePlay(e) {
         e.stopPropagation();
         var playOrPause = video.paused ? 'play' : 'pause';
@@ -82,13 +83,12 @@ function playMute() {
     
     function updatePlayPause(e) {
         e.stopPropagation();
-        var playPauseIcon = this.paused ? playIcon : pauseIcon;             
+        var playPauseIcon = this.paused ? playIcon : pauseIcon;    
         toggle.innerHTML = playPauseIcon;
     }
     
     function toggleSound(e) {
         e.stopPropagation();
-        console.log(video.muted);
         if(video.muted){
             video.muted = false;
         sound.innerHTML = volumeUp;

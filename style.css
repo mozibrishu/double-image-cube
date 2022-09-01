@@ -17,7 +17,27 @@ body {
     left: 0;
 }
 
+.video-controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 3px;
+}
+/* #toggle{
+    position: absolute;
+    bottom: -5;
+    left: 5;
+} */
 
+/* #sound{
+    position: absolute;
+    bottom: 5;
+    right: 5;
+} */
 
 .scene {
     width: 300px;
